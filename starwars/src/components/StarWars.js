@@ -17,14 +17,13 @@ export default function StarWars() {
         console.log(err);
       }
     }
-
     fetchData();
   }, []);
 
   return (
     <div className="card-container">
-      {people.map(person => {
-        return <StarWarsCard name={person.name} homeworld={person.homeworld} />;
+      {people.map((person, index) => {
+        return <StarWarsCard name={person.name} height={person.height} />;
       })}
     </div>
   );
